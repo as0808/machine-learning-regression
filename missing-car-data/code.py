@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-car=pd.read_csv("/car.csv")
+car=pd.read_csv("/missing_data.csv")
 car
 
 car["Make"].fillna("missing", inplace= True)
