@@ -27,13 +27,13 @@ y = pd.DataFrame(y)
 y
 
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state =18)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.3, random_state =18)
 
 from sklearn.ensemble import RandomForestRegressor
 model=RandomForestRegressor()
 
-model.fit(x,y)
+model.fit(x_train, y_train)
 
-model.predict(x)
+model.predict(x_test)
 
-model.score(x,y)
+model.score(x_test, y_test)
